@@ -1,0 +1,19 @@
+[cerebrium.deployment]
+name = "my-awesome-app"
+python_version = "3.11"
+cuda_version = "12.1"
+include_requirements = true
+
+[cerebrium.hardware]
+compute = "NVIDIA_L4"
+gpu_count = 1
+cpu = 2
+memory = 8.0
+
+[cerebrium.scaling]
+min_replicas = 0
+max_replicas = 1
+cooldown_seconds = 60
+
+[cerebrium.dependencies]
+paths = [".cerebriumignore"]
